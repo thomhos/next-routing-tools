@@ -1,12 +1,18 @@
 {
   "name": "next-router",
+  "author": "Thom Hos (https://github.com/thomhos)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomhos/next-routing-tools.git"
+  },
   "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build && npm run test"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
