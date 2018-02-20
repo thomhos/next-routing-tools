@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteProvider Renders 1`] = `
+<div>
+  routes: 
+  {"index":{"_keys":[],"_path":"/","_regex":{},"_page":"/"}}
+</div>
+`;

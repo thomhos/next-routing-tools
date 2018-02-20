@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "dist",
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "../node_modules", "src/__tests__"]
+}

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders a basic route 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link renders a dynamic route 1`] = `
+<a
+  href="/blog/thing"
+  onClick={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link renders a dynamic route with query 1`] = `
+<a
+  href="/blog/thing?foo=bar"
+  onClick={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link renders a multi dynamic route 1`] = `
+<a
+  href="/blog/thing/comment"
+  onClick={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link renders an external route 1`] = `
+<a
+  href="/external"
+  onClick={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link renders an external route with query 1`] = `
+<a
+  href="/external?foo=bar"
+  onClick={[Function]}
+>
+  Test
+</a>
+`;
