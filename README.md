@@ -53,4 +53,4 @@ import { Link } from 'next-routing-tools'
 <Link href='/blog/fooo' />
 ```
 
-Heavily inspired by next-routes. But as I was using typescript I wanted a slightly different api.
+Heavily inspired by next-routes (thanks!). But as I was using typescript I wanted a slightly different api.
