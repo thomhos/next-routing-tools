@@ -2,15 +2,15 @@ import { Request, Response } from 'express'
 import { Server } from 'next'
 import { parse } from 'url'
 
-import { RoutesMap } from './route'
-import { matchUrl } from './match-url'
+import { RoutesMap } from '../route'
+import { matchUrl } from '../match-url'
 
 /**
  *
  * @param routes
  * @param app
  */
-export const handleExpress = (routes: RoutesMap, app: Server) => (req: Request, res: Response) => {
+export const handle = (routes: RoutesMap, app: Server) => (req: Request, res: Response) => {
     const url = req.url || ''
     const route = matchUrl(routes, url)
 

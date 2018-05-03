@@ -1,4 +1,3 @@
-export * from './express-middleware'
 export * from './match-url'
 export * from './route'
 export * from './link'

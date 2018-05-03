@@ -1,16 +1,15 @@
-const next = require("next");
-const express = require("express");
-const { handleExpress } = require("../dist");
+const next = require('next')
+const express = require('express')
+const { handle } = require('../dist/express')
 
-const routes = require("./routes");
+const routes = require('./routes')
 
-const server = express();
-const app = next({ dev: true, dir: __dirname });
-const handler = handleExpress(routes, app);
+const server = express()
+const app = next({ dev: true, dir: __dirname })
 
 app.prepare().then(() => {
-  server.get("*", handler);
-  server.listen(3000, () => {
-    console.log("Running on http://localhost:3000");
-  });
-});
+    server.get('*', handle(routes, app))
+    server.listen(3000, () => {
+        console.log('Running on http://localhost:3000')
+    })
+})

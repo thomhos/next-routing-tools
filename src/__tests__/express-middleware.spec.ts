@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
-import { route, handleExpress } from '../'
+import { route } from '../'
+import { handle } from '../express'
 
 const mockApp = {
     render(req: Request, res: Response, page: string, query: any) {
@@ -25,10 +26,10 @@ describe('Express handler', () => {
             index: route('/', '/'),
         }
         // @ts-ignore
-        const handle = handleExpress(routes, mockApp)
+        const handler = handle(routes, mockApp)
 
         // @ts-ignore
-        const result = handle({ url: '/' }, {})
+        const result = handler({ url: '/' }, {})
 
         expect(result).toEqual({
             req: { url: '/' },
@@ -43,10 +44,10 @@ describe('Express handler', () => {
             index: route('/:thing', '/'),
         }
         // @ts-ignore
-        const handle = handleExpress(routes, mockApp)
+        const handler = handle(routes, mockApp)
 
         // @ts-ignore
-        const result = handle({ url: '/foo' }, {})
+        const result = handler({ url: '/foo' }, {})
 
         expect(result).toEqual({
             req: { url: '/foo' },
@@ -61,10 +62,10 @@ describe('Express handler', () => {
             index: route('/', '/'),
         }
         // @ts-ignore
-        const handle = handleExpress(routes, mockApp)
+        const handler = handle(routes, mockApp)
 
         // @ts-ignore
-        const result = handle({ url: '/foo' }, {})
+        const result = handler({ url: '/foo' }, {})
 
         expect(result).toEqual({
             req: { url: '/foo' },
@@ -91,11 +92,11 @@ describe('Express handler', () => {
             index: route('/', '/'),
         }
         // @ts-ignore
-        const handle = handleExpress(routes, mockApp)
+        const handler = handle(routes, mockApp)
 
         try {
             // @ts-ignore
-            const result = handle({ url: undefined }, {})
+            const result = handler({ url: undefined }, {})
         } catch (e) {
             expect(e.message).toEqual('You must provide a url!')
         }
